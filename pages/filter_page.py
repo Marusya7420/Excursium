@@ -2,9 +2,9 @@ from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 
 class FilterPage(BasePage):
-    LOCATOR_BTN_RATING_SCHOOLL = (By.XPATH, '//label[@for=\"popolarType_7\"]')
+    LOCATOR_BTN_RATING_SCHOOLL = (By.XPATH, '//*[@id=\"popolarType_7\"]')
     LOCATOR_BTN_CLASS_2 = (By.XPATH, '//*[@id=\"collapse-grade\"]/li[2]/label')
-    LOCATOR_BTN_PRICE_2500 = (By.XPATH, '//*[@id=\"priceRange_2500\"]')
+    LOCATOR_BTN_PRICE_2500 = (By.XPATH, '///*[@id=\"priceRange_2500\"]')
     LOCATOR_BTN_TIME_1 = (By.XPATH, '//*[@id=\"time_6\"]')
     LOCATOR_BTN_PLACE_MOSCOW = (By.XPATH, '//*[@id=\"regions_77\"]')
     LOCATOR_BTN_ACTIVITY = (By.XPATH, '//*[@id=\"activity3232\"]')
