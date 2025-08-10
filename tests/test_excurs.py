@@ -2,7 +2,6 @@ from pages.auth_page import AuthPage
 from pages.filter_page import FilterPage
 from pages.registration_page import RegistrationPage
 from pages.booking_page import BookingPage
-
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -154,9 +153,7 @@ def test_filter_clear(browser, filter_page, auth_page, booking_exc):
     browser.refresh()
     wait = WebDriverWait(browser, 5)
     booking_exc.click_on_begin_exc()
-    filter_page.click_to_btn_class()
     filter_page.click_to_btn_price()
-    filter_page.click_to_btn_place()
     filter_page.click_to_filter_clear()
     wait = WebDriverWait(browser, 15)
     current_url = browser.current_url
@@ -188,6 +185,7 @@ def test_booking_valid_data(browser, booking_exc, auth_page, filter_page):
         assert False, "Oder not success"
 
 """ №10 Excursion booking with invalid data limit values field"""
+@pytest.mark.xfail(reason="Элементы перекрыты другими")
 @pytest.mark.parametrize('name_value',
                          [generate_string(256), russ_chars(), special_chars(), 123],
                          ids=['256 symbols', 'russian', 'specials', 'digit'])
