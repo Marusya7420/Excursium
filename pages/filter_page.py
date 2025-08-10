@@ -4,11 +4,11 @@ from selenium.webdriver.common.by import By
 class FilterPage(BasePage):
     LOCATOR_BTN_RATING_SCHOOLL = (By.XPATH, '//*[@id=\"popolarType_7\"]')
     LOCATOR_BTN_CLASS_2 = (By.XPATH, '//*[@id=\"collapse-grade\"]/li[2]/label')
-    LOCATOR_BTN_PRICE_2500 = (By.ID, "priceRange_2500")
-    LOCATOR_BTN_TIME_1 = (By.ID, "time_6")
-    LOCATOR_BTN_PLACE_MOSCOW = (By.ID, "regions_77")
-    LOCATOR_BTN_ACTIVITY = (By.ID, "activity3232")
-    LOCATOR_BTN_CLEAR = (By.XPATH, '//*[@id=\"offcanvasSidebar\"]/div[3]/butto')
+    LOCATOR_BTN_PRICE_2500 = (By.ID, 'priceRange_2500')
+    LOCATOR_BTN_TIME_1 = (By.ID, 'time_6')
+    LOCATOR_BTN_PLACE_MOSCOW = (By.ID, 'regions_77')
+    LOCATOR_BTN_ACTIVITY = (By.ID, 'activity3232')
+    LOCATOR_BTN_CLEAR = (By.XPATH, '//*[@id=\"offcanvasSidebar\"]/div[3]/button')
    
 
     def click_to_rating_scholl(self):
