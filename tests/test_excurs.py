@@ -167,7 +167,7 @@ def test_filter_clear(browser, filter_page, auth_page, booking_exc):
         assert False, "filter has error"
 
 """ №9 Excursion booking with valid data values field"""
-@pytest.mark.xfail(reason="Либо появляется капча, либо элементперекрыт другим")
+@pytest.mark.xfail(reason="Элементы перекрыты другими")
 def test_booking_valid_data(browser, booking_exc, auth_page, filter_page):
     auth_page.go_to_site()
     browser.refresh()
@@ -200,7 +200,7 @@ def test_booking_invalid_data(browser, booking_exc, auth_page, filter_page, name
     browser.refresh()
     wait = WebDriverWait(browser, 5)
     booking_exc.click_on_begin_exc()
-    booking_exc.click_on_arrow()
+    booking_exc.click_on_first_exc()
     booking_exc.click_quantity()
     booking_exc.click_book_exc()
     booking_exc.write_name_book(name_value)
